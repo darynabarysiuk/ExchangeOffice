@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExchangeOffice
+namespace ExchangeOffice.Application
 {
     public partial class HandlingClientForm : Form
     {

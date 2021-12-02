@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExchangeOffice
+namespace ExchangeOffice.Application
 {
-    public partial class OperationHistoryForm : Form
+    public partial class ExchangeRatesForm : Form
     {
-        public OperationHistoryForm()
+        public ExchangeRatesForm()
         {
             InitializeComponent();
         }

@@ -1,4 +1,4 @@
-namespace ExchangeOffice
+namespace ExchangeOffice.Application
 {
     internal static class Program
     {

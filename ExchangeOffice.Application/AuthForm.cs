@@ -1,4 +1,4 @@
-namespace ExchangeOffice
+namespace ExchangeOffice.Application
 {
     public partial class AuthForm : Form
     {
