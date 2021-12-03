@@ -1,4 +1,4 @@
-﻿namespace ExchangeOffice.Application.Application
+﻿namespace ExchangeOffice.App
 {
     partial class MainForm
     {

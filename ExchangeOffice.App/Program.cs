@@ -1,4 +1,6 @@
-namespace ExchangeOffice.Application
+using ExchangeOffice.App;
+
+namespace ExchangeOffice
 {
     internal static class Program
     {
@@ -9,7 +11,7 @@ namespace ExchangeOffice.Application
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new AuthForm());
+            System.Windows.Forms.Application.Run(new AuthForm());
         }
     }
 }

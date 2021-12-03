@@ -1,6 +1,6 @@
-﻿namespace ExchangeOffice.Application
+﻿namespace ExchangeOffice.App
 {
-    partial class OperationHistoryForm
+    partial class ExchangeRatesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,21 +34,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(676, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(424, 319);
             this.dataGridView1.TabIndex = 0;
             // 
-            // OperationHistoryForm
+            // ExchangeRatesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 344);
+            this.ClientSize = new System.Drawing.Size(448, 343);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "OperationHistoryForm";
-            this.Text = "История операций";
+            this.Name = "ExchangeRatesForm";
+            this.Text = "Изменение курса валют";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
