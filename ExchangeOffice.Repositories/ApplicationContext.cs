@@ -1,10 +1,21 @@
 ﻿using ExchangeOffice.Common;
+using ExchangeOffice.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExchangeOffice.Repositories
 {
     public class ApplicationContext : DbContext
     {
+        public DbSet<Casher> Cashers { get; set; }
+
+        public DbSet<Currency> Сurrencies { get; set; }
+
+        public DbSet<СurrencyLimit> СurrencyLimits { get; set; }
+
+        public DbSet<CurrencyRate> CurrencyRates { get; set; }
+
+        public DbSet<OperationHistory> OperationHistories { get; set; }
+
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
@@ -22,6 +33,33 @@ namespace ExchangeOffice.Repositories
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder
+                .Entity<Currency>()
+                .HasOne(u => u.СurrencyLimit)
+                .WithOne(p => p.Сurrency)
+                .HasForeignKey<СurrencyLimit>(p => p.CurrencyID)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder
+                .Entity<Currency>()
+                .HasMany(u => u.CurrencyRateFrom)
+                .WithOne(p => p.CurrencyFrom)
+                .HasForeignKey(p => p.CurrencyIDFrom)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder
+                .Entity<Currency>()
+                .HasMany(u => u.CurrencyRateTo)
+                .WithOne(p => p.CurrencyTo)
+                .HasForeignKey(p => p.CurrencyIDTo)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder
+                .Entity<CurrencyRate>()
+                .HasMany(u => u.OperationHistories)
+                .WithOne(p => p.CurrencyRate)
+                .HasForeignKey(p => p.CurrencyRateID);
         }
     }
 }
