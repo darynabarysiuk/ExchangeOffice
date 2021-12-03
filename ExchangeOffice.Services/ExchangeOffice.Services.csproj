@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ExchangeOffice.Common\ExchangeOffice.Common.csproj" />
+    <ProjectReference Include="..\ExchangeOffice.IServices\ExchangeOffice.IServices.csproj" />
+  </ItemGroup>
+
 </Project>
