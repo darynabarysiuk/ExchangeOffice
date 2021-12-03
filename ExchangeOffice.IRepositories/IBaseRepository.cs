@@ -16,7 +16,7 @@ namespace ExchangeOffice.IRepositories
 
         Task<int> RemoveRangeAsync(IEnumerable<TEntity> entities);
 
-        Task<TEntity> GetByAsync(Expression<Func<TEntity, bool>> expression, params Expression<Func<TEntity, object>>[] includes);
+        Task<TEntity?> GetByAsync(Expression<Func<TEntity, bool>> expression, params Expression<Func<TEntity, object>>[] includes);
 
         IQueryable<TEntity> GetAllQueryable();
 

@@ -46,7 +46,7 @@ namespace ExchangeOffice.Repositories
             return _dbSet.AsQueryable();
         }
 
-        public async Task<TEntity> GetByAsync(Expression<Func<TEntity, bool>> expression, params Expression<Func<TEntity, object>>[] includes)
+        public async Task<TEntity?> GetByAsync(Expression<Func<TEntity, bool>> expression, params Expression<Func<TEntity, object>>[] includes)
         {
             IQueryable<TEntity> query = _dbSet;
             foreach (var include in includes)
