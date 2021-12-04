@@ -11,6 +11,8 @@ namespace ExchangeOffice.App
 
         public string Password => textBox2.Text;
 
+        public bool UserSuccessfullyAuthenticated { get; set; } = false;
+
         private AuthPresenter.Factory presenterFactory { get; set; }
 
         private ViewPresenterBase<IAuthView> presenter;
@@ -35,8 +37,7 @@ namespace ExchangeOffice.App
 
         public void ToMainForm()
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            Close();
         }
 
         public void ShowError(string error)

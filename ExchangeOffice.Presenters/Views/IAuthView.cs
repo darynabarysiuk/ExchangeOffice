@@ -7,6 +7,8 @@ namespace ExchangeOffice.Presenters.Views
 
         string Password { get; }
 
+        public bool UserSuccessfullyAuthenticated { get; set; }
+
         event EventHandler AuthClicked;
 
         void ToMainForm();

@@ -17,9 +17,10 @@ namespace ExchangeOffice.Presenters
 
         private void View_AuthClicked(object? sender, EventArgs e)
         {
-            var result = authService.Authentificate(view.Login, view.Password).Result;
+            var result = authService.Authentificate(view.Login, view.Password);
             if(result)
             {
+                view.UserSuccessfullyAuthenticated = true;
                 view.ToMainForm();
             }
             else

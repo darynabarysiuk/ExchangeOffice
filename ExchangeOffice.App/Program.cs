@@ -11,7 +11,13 @@ namespace ExchangeOffice
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            System.Windows.Forms.Application.Run(new AuthForm());
+            var authForm = new AuthForm();
+            System.Windows.Forms.Application.Run(authForm);
+
+            if (authForm.UserSuccessfullyAuthenticated)
+            {
+                Application.Run(new MainForm());
+            }
         }
     }
 }
