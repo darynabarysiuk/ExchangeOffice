@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExchangeOffice.Autofac\ExchangeOffice.Autofac.csproj" />
+    <ProjectReference Include="..\ExchangeOffice.Presenters\ExchangeOffice.Presenters.csproj" />
     <ProjectReference Include="..\ExchangeOffice.Services\ExchangeOffice.Services.csproj" />
   </ItemGroup>
 

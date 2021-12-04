@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ExchangeOffice.IRepositories\ExchangeOffice.IRepositories.csproj" />
     <ProjectReference Include="..\ExchangeOffice.IServices\ExchangeOffice.IServices.csproj" />
+    <ProjectReference Include="..\ExchangeOffice.Presenters\ExchangeOffice.Presenters.csproj" />
     <ProjectReference Include="..\ExchangeOffice.Repositories\ExchangeOffice.Repositories.csproj" />
     <ProjectReference Include="..\ExchangeOffice.Services\ExchangeOffice.Services.csproj" />
   </ItemGroup>

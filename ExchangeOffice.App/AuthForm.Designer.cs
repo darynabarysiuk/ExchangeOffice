@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Button1 = new System.Windows.Forms.Button();
+            this.AuthButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,15 +36,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Button1
+            // AuthButton
             // 
-            this.Button1.Location = new System.Drawing.Point(132, 142);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(75, 23);
-            this.Button1.TabIndex = 0;
-            this.Button1.Text = "Войти";
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.AuthButton.Location = new System.Drawing.Point(132, 142);
+            this.AuthButton.Name = "AuthButton";
+            this.AuthButton.Size = new System.Drawing.Size(75, 23);
+            this.AuthButton.TabIndex = 0;
+            this.AuthButton.Text = "Войти";
+            this.AuthButton.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -98,7 +97,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Button1);
+            this.Controls.Add(this.AuthButton);
             this.Name = "AuthForm";
             this.Text = "Авторизация";
             this.ResumeLayout(false);
@@ -108,7 +107,7 @@
 
         #endregion
 
-        private Button Button1;
+        private Button AuthButton;
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label1;

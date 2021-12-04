@@ -1,8 +1,9 @@
 ﻿using ExchangeOffice.Common;
+using ExchangeOffice.IServices;
 
 namespace ExchangeOffice.Services
 {
-    public class DateTimeService
+    public class DateTimeService : IDateTimeService
     {
         public DateTime GetCurrentDateTime => Configuration.CurrentDate + DateTime.Now.TimeOfDay;
 
