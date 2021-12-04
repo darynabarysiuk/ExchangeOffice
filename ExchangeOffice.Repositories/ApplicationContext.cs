@@ -16,8 +16,8 @@ namespace ExchangeOffice.Repositories
 
         public DbSet<OperationHistory> OperationHistories { get; set; }
 
-        public ApplicationContext(DbContextOptions<ApplicationContext> options)
-            : base(options)
+        public ApplicationContext()
+            : base()
         {
         }
 
