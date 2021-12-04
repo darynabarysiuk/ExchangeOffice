@@ -75,14 +75,12 @@ namespace ExchangeOffice.Repositories.Migrations
                         name: "FK_CurrencyRates_Сurrencies_CurrencyIDFrom",
                         column: x => x.CurrencyIDFrom,
                         principalTable: "Сurrencies",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                     table.ForeignKey(
                         name: "FK_CurrencyRates_Сurrencies_CurrencyIDTo",
                         column: x => x.CurrencyIDTo,
                         principalTable: "Сurrencies",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateTable(

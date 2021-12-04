@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExchangeOffice.Repositories.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20211204063303_InitMigration")]
+    [Migration("20211204072328_InitMigration")]
     partial class InitMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -157,13 +157,13 @@ namespace ExchangeOffice.Repositories.Migrations
                     b.HasOne("ExchangeOffice.Entities.Currency", "CurrencyFrom")
                         .WithMany("CurrencyRateFrom")
                         .HasForeignKey("CurrencyIDFrom")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("ExchangeOffice.Entities.Currency", "CurrencyTo")
                         .WithMany("CurrencyRateTo")
                         .HasForeignKey("CurrencyIDTo")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("CurrencyFrom");

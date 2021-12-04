@@ -22,12 +22,8 @@ namespace ExchangeOffice.Repositories
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if(Configuration.ConnectionString == null)
-            {
-                throw new ArgumentNullException(nameof(Configuration.ConnectionString));
-            }
-            optionsBuilder.UseSqlServer(Configuration.ConnectionString);
+        {   
+            optionsBuilder.UseSqlServer("Server=CMDB-119979;Database=ExchangeOffice;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -46,14 +42,14 @@ namespace ExchangeOffice.Repositories
                 .HasMany(u => u.CurrencyRateFrom)
                 .WithOne(p => p.CurrencyFrom)
                 .HasForeignKey(p => p.CurrencyIDFrom)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder
                 .Entity<Currency>()
                 .HasMany(u => u.CurrencyRateTo)
                 .WithOne(p => p.CurrencyTo)
                 .HasForeignKey(p => p.CurrencyIDTo)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder
                 .Entity<CurrencyRate>()

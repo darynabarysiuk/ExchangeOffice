@@ -14,7 +14,7 @@ namespace ExchangeOffice.Services
             this.repositoryCashers = repositoryCashers;
         }
 
-        public async Task<bool> Authentificate(string login, string password)
+        public bool Authentificate(string login, string password)
         {
             string hash;
             using (var sha256 = SHA256.Create())
@@ -22,9 +22,9 @@ namespace ExchangeOffice.Services
                 var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 hash = BitConverter.ToString(hashedBytes);
             }
-            var casher = await repositoryCashers.GetByAsync(c => c.Login == login && c.PasswordHash == hash);
+            var casher = repositoryCashers.GetAllQueryable().Where(c => c.Login == login && c.PasswordHash == hash).Any();
 
-            return casher != null;
+            return casher;
         }
     }
 }

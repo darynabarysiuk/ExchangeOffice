@@ -4,7 +4,7 @@ namespace ExchangeOffice.Common
 {
     public class Configuration
     {
-        public static string? ConnectionString => ConfigurationManager.ConnectionStrings[0].ConnectionString;
+        public static string? ConnectionString => ConfigurationManager.ConnectionStrings["sqlString"].ToString();
 
         public static DateTime CurrentDate
         {

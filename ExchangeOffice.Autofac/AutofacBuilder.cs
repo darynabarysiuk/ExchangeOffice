@@ -13,7 +13,7 @@ namespace ExchangeOffice.App.Autofac
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<ApplicationContext>().As<ApplicationContext>();
+            builder.RegisterType<ApplicationContext>().As<ApplicationContext>().InstancePerLifetimeScope();
 
             #region Repositories
             builder.RegisterType<RepositoryCashers>().As<IRepositoryCashers>();

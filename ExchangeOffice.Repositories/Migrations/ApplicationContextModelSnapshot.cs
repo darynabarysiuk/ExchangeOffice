@@ -155,13 +155,13 @@ namespace ExchangeOffice.Repositories.Migrations
                     b.HasOne("ExchangeOffice.Entities.Currency", "CurrencyFrom")
                         .WithMany("CurrencyRateFrom")
                         .HasForeignKey("CurrencyIDFrom")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("ExchangeOffice.Entities.Currency", "CurrencyTo")
                         .WithMany("CurrencyRateTo")
                         .HasForeignKey("CurrencyIDTo")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("CurrencyFrom");
