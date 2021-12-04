@@ -1,20 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Autofac;
+using ExchangeOffice.App.Autofac;
+using ExchangeOffice.Presenters;
+using ExchangeOffice.Presenters.Views;
 
 namespace ExchangeOffice.App
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IMainView
     {
+
+        private MainPresenter.Factory presenterFactory { get; set; }
+
+        private ViewPresenterBase<IMainView> presenter;
+
         public MainForm()
         {
             InitializeComponent();
+            var container = AutofacBuilder.Build();
+            using (var scope = container.BeginLifetimeScope())
+            {
+                presenterFactory = scope.Resolve<MainPresenter.Factory>();
+                presenter = presenterFactory(this);
+            }
+            presenter.InitView();
         }
 
         private void button4_Click(object sender, EventArgs e)
