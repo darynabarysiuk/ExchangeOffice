@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeOffice.App", "Excha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeOffice.Common", "ExchangeOffice.Common\ExchangeOffice.Common.csproj", "{4EE0C87D-5F1B-4B36-912A-937AFA3CDB54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeOffice.Autofac", "ExchangeOffice.Autofac\ExchangeOffice.Autofac.csproj", "{E9E7F9A4-C024-468E-875C-8E16CB0851E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4EE0C87D-5F1B-4B36-912A-937AFA3CDB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EE0C87D-5F1B-4B36-912A-937AFA3CDB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EE0C87D-5F1B-4B36-912A-937AFA3CDB54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E7F9A4-C024-468E-875C-8E16CB0851E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E7F9A4-C024-468E-875C-8E16CB0851E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E7F9A4-C024-468E-875C-8E16CB0851E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E7F9A4-C024-468E-875C-8E16CB0851E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿using ExchangeOffice.Entities;
 
-namespace ExchangeOffice.IService
+namespace ExchangeOffice.IServices
 {
     public interface IOperationService
     {

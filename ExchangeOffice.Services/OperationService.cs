@@ -1,6 +1,6 @@
 ﻿using ExchangeOffice.Entities;
 using ExchangeOffice.IRepositories;
-using ExchangeOffice.IService;
+using ExchangeOffice.IServices;
 
 namespace ExchangeOffice.Services
 {
