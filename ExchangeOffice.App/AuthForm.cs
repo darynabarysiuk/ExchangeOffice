@@ -5,7 +5,7 @@ using ExchangeOffice.Presenters.Views;
 
 namespace ExchangeOffice.App
 {
-    public partial class AuthForm : Form, IAuthView
+    public partial class AuthForm : BaseForm, IAuthView
     {
         public string Login => textBox1.Text;
 
@@ -38,11 +38,6 @@ namespace ExchangeOffice.App
         public void ToMainForm()
         {
             Close();
-        }
-
-        public void ShowError(string error)
-        {
-            MessageBox.Show("Ошибка! " + error, "Ошибка");
         }
     }
 }

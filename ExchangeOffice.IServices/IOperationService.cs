@@ -4,8 +4,10 @@ namespace ExchangeOffice.IServices
 {
     public interface IOperationService
     {
-        public Task<bool> AddOperation(OperationHistory operationHistory);
+        public Task<OperationHistory> AddOperation(OperationHistory operationHistory);
 
         public ICollection<OperationHistory> GetOperationHistory();
+
+        public OperationHistory GetOperationByID(int id);
     }
 }

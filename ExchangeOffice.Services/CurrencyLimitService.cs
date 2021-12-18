@@ -23,6 +23,11 @@ namespace ExchangeOffice.Services
             return value;
         }
 
+        public IEnumerable<СurrencyLimit> GetСurrencyLimits()
+        {
+            return repositoryСurrencyLimits.GetAllByQueryable(null, limit => limit.Сurrency);
+        }
+
         public async Task<bool> SetCurrencyLimit(int CurrencyID, double newLimit)
         {
             var сurrencyLimit = repositoryСurrencyLimits.GetAllQueryable()

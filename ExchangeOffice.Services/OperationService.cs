@@ -13,9 +13,9 @@ namespace ExchangeOffice.Services
             this.repositoryOperationHistories = repositoryOperationHistories;
         }
 
-        public async Task<bool> AddOperation(OperationHistory operationHistory)
+        public async Task<OperationHistory> AddOperation(OperationHistory operationHistory)
         {
-            return await repositoryOperationHistories.CreateAsync(operationHistory) != null;
+            return await repositoryOperationHistories.CreateAsync(operationHistory);
         }
 
         public ICollection<OperationHistory> GetOperationHistory()
@@ -29,5 +29,18 @@ namespace ExchangeOffice.Services
 
             return operations;
         }
+
+        public OperationHistory GetOperationByID(int id)
+        {
+            var operation = repositoryOperationHistories.GetAllByQueryable(
+                p => p.ID == id,
+                p => p.CurrencyRate,
+                p => p.CurrencyRate.CurrencyFrom,
+                p => p.CurrencyRate.CurrencyTo
+            ).FirstOrDefault();
+
+            return operation;
+        }
+
     }
 }

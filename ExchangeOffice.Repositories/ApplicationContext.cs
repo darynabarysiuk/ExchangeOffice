@@ -22,8 +22,12 @@ namespace ExchangeOffice.Repositories
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {   
-            optionsBuilder.UseSqlServer("Server=CMDB-119979;Database=ExchangeOffice;Trusted_Connection=True;");
+        {
+            if (Configuration.ConnectionString == null)
+            {
+                throw new ArgumentNullException(nameof(Configuration.ConnectionString));
+            }
+            optionsBuilder.UseSqlServer(Configuration.ConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

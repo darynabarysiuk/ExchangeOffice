@@ -5,6 +5,9 @@
     <Compile Update="AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ExchangeLimitForm.cs">
       <SubType>Form</SubType>
     </Compile>

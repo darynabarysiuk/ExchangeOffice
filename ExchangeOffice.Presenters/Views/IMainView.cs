@@ -1,6 +1,6 @@
 ﻿namespace ExchangeOffice.Presenters.Views
 {
-    public interface IMainView
+    public interface IMainView : IBaseView
     {
     }
 }

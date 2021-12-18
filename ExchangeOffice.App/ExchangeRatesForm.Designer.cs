@@ -51,6 +51,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(93, 23);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -58,6 +59,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 2;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HandleDoudleTetBox_KeyPress);
             // 
             // label1
             // 
@@ -75,6 +77,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(93, 23);
             this.comboBox2.TabIndex = 4;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // ExchangeRatesForm
             // 

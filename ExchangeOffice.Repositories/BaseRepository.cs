@@ -38,7 +38,11 @@ namespace ExchangeOffice.Repositories
             {
                 query = query.Include(include);
             }
-            return query.Where(expression);
+            if(expression != null)
+            {
+                return query.Where(expression);
+            }
+            return query;
         }
 
         public IQueryable<TEntity> GetAllQueryable()

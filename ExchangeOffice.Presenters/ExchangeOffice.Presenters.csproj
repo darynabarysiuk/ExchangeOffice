@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ExchangeOffice.IServices\ExchangeOffice.IServices.csproj" />
+    <ProjectReference Include="..\ExchangeOffice.Models\ExchangeOffice.Models.csproj" />
   </ItemGroup>
 
 </Project>

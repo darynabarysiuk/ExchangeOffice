@@ -6,6 +6,6 @@ namespace ExchangeOffice.IServices
     {
         Task<bool> ChangeCurrencyRate(CurrencyRate updatedCurrencyRate);
 
-        double? GetCurrencyRateValue(int CurrencyIDFrom, int CurrencyIDTo);
+        CurrencyRate? GetCurrencyRate(int CurrencyIDFrom, int CurrencyIDTo);
     }
 }

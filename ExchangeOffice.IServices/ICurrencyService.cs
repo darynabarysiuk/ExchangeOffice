@@ -4,6 +4,8 @@ namespace ExchangeOffice.IServices
 {
     public interface ICurrencyService
     {
-        public ICollection<Currency> GetCurrencies();
+        ICollection<Currency> GetCurrencies();
+
+        Currency GetCurrencyByShortName(string shortName);
     }
 }

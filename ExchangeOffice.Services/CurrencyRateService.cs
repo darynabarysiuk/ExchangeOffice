@@ -31,20 +31,21 @@ namespace ExchangeOffice.Services
             else
             {
                 updatedCurrencyRate.DateTime = currentDate;
-                updatedCurrencyRate.ID = -1;
+                updatedCurrencyRate.ID = default(int);
                 await repositoryCurrencyRates.CreateAsync(updatedCurrencyRate);
             }
 
             return true;
         }
 
-        public double? GetCurrencyRateValue(int CurrencyIDFrom, int CurrencyIDTo)
+        public CurrencyRate? GetCurrencyRate(int CurrencyIDFrom, int CurrencyIDTo)
         {
             var value = repositoryCurrencyRates.GetAllQueryable()
                 .Where(
                     p => p.CurrencyIDFrom == CurrencyIDFrom &&
                     p.CurrencyIDTo == CurrencyIDTo
-                ).MaxBy(p => p.DateTime)?.Value;
+                ).OrderByDescending(p => p.DateTime)
+                .FirstOrDefault();
 
             return value;
         }

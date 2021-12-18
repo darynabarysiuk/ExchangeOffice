@@ -45,7 +45,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Обменять";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -70,6 +69,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HandleDoudleTetBox_KeyPress);
             // 
             // textBox2
             // 
@@ -77,6 +77,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 4;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HandleDoudleTetBox_KeyPress);
             // 
             // comboBox1
             // 
@@ -85,6 +86,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 23);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -93,6 +95,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(100, 23);
             this.comboBox2.TabIndex = 6;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // HandlingClientForm
             // 

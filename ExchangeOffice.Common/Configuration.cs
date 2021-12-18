@@ -19,7 +19,18 @@ namespace ExchangeOffice.Common
             }
             set
             {
-                ConfigurationManager.AppSettings.Set("currentDate", value.Date.ToString());
+                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                var settings = configFile.AppSettings.Settings;
+                if (settings["currentDate"] == null)
+                {
+                    settings.Add("currentDate", value.Date.ToString());
+                }
+                else
+                {
+                    settings["currentDate"].Value = value.Date.ToString();
+                }
+                configFile.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
             }
         }
     }

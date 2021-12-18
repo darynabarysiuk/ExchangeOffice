@@ -13,7 +13,7 @@ namespace ExchangeOffice.App.Autofac
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<ApplicationContext>().As<ApplicationContext>().InstancePerLifetimeScope();
+            builder.RegisterType<ApplicationContext>().As<ApplicationContext>().SingleInstance();
 
             #region Repositories
             builder.RegisterType<RepositoryCashers>().As<IRepositoryCashers>();
@@ -30,10 +30,17 @@ namespace ExchangeOffice.App.Autofac
             builder.RegisterType<CurrencyRateService>().As<ICurrencyRateService>();
             builder.RegisterType<DateTimeService>().As<IDateTimeService>();
             builder.RegisterType<OperationService>().As<IOperationService>();
+            builder.RegisterType<CheckService>().As<ICheckService>();
             #endregion
 
             #region Presenters
             builder.RegisterType<AuthPresenter>().As<AuthPresenter>();
+            builder.RegisterType<MainPresenter>().As<MainPresenter>();
+            builder.RegisterType<HandlingClientPresenter>().As<HandlingClientPresenter>();
+            builder.RegisterType<OperationHistoryPresenter>().As<OperationHistoryPresenter>();
+            builder.RegisterType<SimulationNextDayPresenter>().As<SimulationNextDayPresenter>();
+            builder.RegisterType<ExchangeLimitPresenter>().As<ExchangeLimitPresenter>();
+            builder.RegisterType<ExchangeRatesPresenter>().As<ExchangeRatesPresenter>();
             #endregion
 
             return builder.Build();

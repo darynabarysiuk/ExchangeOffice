@@ -1,7 +1,7 @@
 ﻿
 namespace ExchangeOffice.Presenters.Views
 {
-    public interface IAuthView
+    public interface IAuthView : IBaseView
     {
         string Login { get; }
 
@@ -12,7 +12,5 @@ namespace ExchangeOffice.Presenters.Views
         event EventHandler AuthClicked;
 
         void ToMainForm();
-
-        void ShowError(string error);
     }
 }

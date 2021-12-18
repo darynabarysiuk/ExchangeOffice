@@ -17,5 +17,10 @@ namespace ExchangeOffice.Services
         {
             return repositoryCurrencies.GetAllQueryable().ToList();
         }
+
+        public Currency GetCurrencyByShortName(string shortName)
+        {
+            return repositoryCurrencies.GetAllByQueryable(e => e.ShortName == shortName).FirstOrDefault();
+        }
     }
 }

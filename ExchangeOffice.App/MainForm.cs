@@ -5,9 +5,8 @@ using ExchangeOffice.Presenters.Views;
 
 namespace ExchangeOffice.App
 {
-    public partial class MainForm : Form, IMainView
+    public partial class MainForm : BaseForm, IMainView
     {
-
         private MainPresenter.Factory presenterFactory { get; set; }
 
         private ViewPresenterBase<IMainView> presenter;
