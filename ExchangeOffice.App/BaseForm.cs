@@ -14,7 +14,7 @@ namespace ExchangeOffice.App
             MessageBox.Show("Ошибка! " + error, "Ошибка");
         }
 
-        protected void HandleDoudleTetBox_KeyPress(object sender, KeyPressEventArgs e)
+        protected void HandleDoudleTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             string startText = ((TextBox)sender).Text;
             try

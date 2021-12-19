@@ -66,7 +66,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 7;
-            this.textBox1.KeyPress += new KeyPressEventHandler(this.HandleDoudleTetBox_KeyPress);
+            this.textBox1.KeyPress += new KeyPressEventHandler(this.HandleDoudleTextBox_KeyPress);
             // 
             // ExchangeLimitForm
             // 
